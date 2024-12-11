@@ -1,8 +1,7 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import Input.InputReader;
 
 public class Day1 {
     public static void main(String[] args) throws Exception{
@@ -10,22 +9,12 @@ public class Day1 {
         System.out.println("Second Problem: " + run(2));
     }
     public static int run(int choice)throws Exception{
-
+        InputReader inputReader = new InputReader();
         if (choice == 1)
-            return sumOfDistances(sortIntegerArray(splitStringArrayIntoIntArray(input())));
-        return sumOfSimilarity(sortIntegerArray(splitStringArrayIntoIntArray(input())));
+            return sumOfDistances(sortIntegerArray(splitStringArrayIntoIntArray(inputReader.input("Inputs/Day1_Input.txt"))));
+        return sumOfSimilarity(sortIntegerArray(splitStringArrayIntoIntArray(inputReader.input("Inputs/Day1_Input.txt"))));
     }
-    public static ArrayList input() throws Exception{
-        ArrayList<String> lines = new ArrayList<>(1000);
-        File file = new File("Inputs/Day1_Input.txt");
-        FileReader fileReader = new FileReader(file);
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-        String line;
-        while((line = bufferedReader.readLine()) != null){
-            lines.add(line);
-        }
-        return lines;
-    }
+
     public static int[][] splitStringArrayIntoIntArray(ArrayList list){
         int[][] unsortedIntegers = new int[list.size()][2];
         for (int i = 0; i < unsortedIntegers.length;i++){
