@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Day_1 {
+public class Day1 {
     public static void main(String[] args) throws Exception{
         System.out.println("First Problem: " + run(1));
         System.out.println("Second Problem: " + run(2));
