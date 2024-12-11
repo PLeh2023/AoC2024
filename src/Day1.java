@@ -1,6 +1,5 @@
-
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.ArrayList;
 import Input.InputReader;
 
 public class Day1 {
