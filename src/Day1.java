@@ -3,21 +3,21 @@ import java.util.ArrayList;
 import Input.InputReader;
 
 public class Day1 {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args){
         System.out.println("First Problem: " + run(1));
         System.out.println("Second Problem: " + run(2));
     }
-    public static int run(int choice)throws Exception{
+    public static int run(int choice){
         InputReader inputReader = new InputReader();
         if (choice == 1)
             return sumOfDistances(sortIntegerArray(splitStringArrayIntoIntArray(inputReader.input("Inputs/Day1_Input.txt"))));
         return sumOfSimilarity(sortIntegerArray(splitStringArrayIntoIntArray(inputReader.input("Inputs/Day1_Input.txt"))));
     }
 
-    public static int[][] splitStringArrayIntoIntArray(ArrayList list){
+    public static int[][] splitStringArrayIntoIntArray(ArrayList<String> list){
         int[][] unsortedIntegers = new int[list.size()][2];
         for (int i = 0; i < unsortedIntegers.length;i++){
-            String tmp = (String) list.get(i);
+            String tmp = list.get(i);
             String[] tmpArray = tmp.replace("   ",";").split(";");
             unsortedIntegers[i][0] = Integer.parseInt(tmpArray[0]);
             unsortedIntegers[i][1] = Integer.parseInt(tmpArray[1]);
