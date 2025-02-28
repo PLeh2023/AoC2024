@@ -3,14 +3,14 @@ import java.util.ArrayList;
 
 public class Day3 {
     public static void main(String[] args) {
-        System.out.println(run(1));
-        System.out.println(run(2));
+        System.out.println("First Problem: " + run(1));
+        System.out.println("Second Problem: " + run(2));
     }
     public static int run(int choice){
         InputReader inputReader = new InputReader();
         if(choice == 1)
-            return sumMultiplyTasks(findMulitplyTask(inputReader.input("Inputs/Day3_Input.txt")));
-        return sumMultiplyTasks(findMultiplyTaskWithModifiers(inputReader.input("Inputs/Day3_Input.txt")));
+            return sumMultiplyTasks(findMulitplyTask(inputReader.inputToLines("Inputs/Day3_Input.txt")));
+        return sumMultiplyTasks(findMultiplyTaskWithModifiers(inputReader.inputToLines("Inputs/Day3_Input.txt")));
     }
     public static ArrayList<String> findMulitplyTask(ArrayList<String> memory){
         ArrayList<String> multiplyTasks = new ArrayList<>(100);

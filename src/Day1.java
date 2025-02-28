@@ -10,8 +10,8 @@ public class Day1 {
     public static int run(int choice){
         InputReader inputReader = new InputReader();
         if (choice == 1)
-            return sumOfDistances(sortIntegerArray(splitStringArrayIntoIntArray(inputReader.input("Inputs/Day1_Input.txt"))));
-        return sumOfSimilarity(sortIntegerArray(splitStringArrayIntoIntArray(inputReader.input("Inputs/Day1_Input.txt"))));
+            return sumOfDistances(sortIntegerArray(splitStringArrayIntoIntArray(inputReader.inputToLines("Inputs/Day1_Input.txt"))));
+        return sumOfSimilarity(sortIntegerArray(splitStringArrayIntoIntArray(inputReader.inputToLines("Inputs/Day1_Input.txt"))));
     }
 
     public static int[][] splitStringArrayIntoIntArray(ArrayList<String> list){

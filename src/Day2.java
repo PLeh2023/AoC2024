@@ -3,12 +3,12 @@ import java.util.ArrayList;
 
 public class Day2 {
     public static void main(String[] args){
-        System.out.println(run(1));
-        System.out.println(run(2));
+        System.out.println("First Problem: " + run(1));
+        System.out.println("Second Problem: " + run(2));
     }
     public static int run(int choice){
         InputReader inputReader = new InputReader();
-        return countSafeReport(splitStringArrayIntoIntArray(inputReader.input("Inputs/Day2_Input.txt")),choice);
+        return countSafeReport(splitStringArrayIntoIntArray(inputReader.inputToLines("Inputs/Day2_Input.txt")),choice);
     }
     public static ArrayList<ArrayList<Integer>> splitStringArrayIntoIntArray(ArrayList<String> lists){
         ArrayList<ArrayList<Integer>> reports = new ArrayList<>(lists.size());
