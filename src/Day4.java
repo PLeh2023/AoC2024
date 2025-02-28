@@ -64,11 +64,11 @@ public class Day4 {
         }
         return sum;
     }
-    public static boolean checkPattern(ArrayList<ArrayList<String>> map, int i, int j, int[][] directions, String pattern) {
+    public static boolean checkPattern(ArrayList<ArrayList<String>> map, int i, int j, int[][] points, String pattern) {
         StringBuilder foundPattern = new StringBuilder();
-        for (int[] dir : directions) {
-            int newRow = i + dir[0];
-            int newCol = j + dir[1];
+        for (int[] point : points) {
+            int newRow = i + point[0];
+            int newCol = j + point[1];
             if (newRow < 0 || newRow >= map.size() || newCol < 0 || newCol >= map.getFirst().size()) {
                 return false;
             }
